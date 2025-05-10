@@ -13,19 +13,37 @@
             box-sizing: border-box;
         }
         
+        /* Vanta Background Setup */
+        #vanta-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-            /* background-image: url(images/birds.gif); */
+            color: #ffffff; /* Light text for better visibility on dark background */
+            background: transparent;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
         
+        /* Content Container Styling for Better Visibility */
+        header, .project-card, .skill-category, footer {
+            background-color: rgba(30, 30, 40, 0.7); /* Semi-transparent dark background */
+            border-radius: 8px;
+            padding: 20px;
+            backdrop-filter: blur(5px); /* Adds a nice blur effect behind content */
+        }
+        
+        /* Rest of your styles with color adjustments */
         a {
-            color: #0366d6;
+            color: #58a6ff; /* Brighter blue for better visibility */
             text-decoration: none;
         }
         
@@ -38,18 +56,18 @@
             text-align: center;
             margin-bottom: 40px;
             padding: 30px 0;
-            border-bottom: 1px solid #eaeaea;
+            border-bottom: 1px solid #444;
         }
         
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            color: #24292e;
+            color: #ffffff;
         }
         
         header p {
             font-size: 1.2rem;
-            color: #586069;
+            color: #cccccc;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -77,21 +95,21 @@
         }
         
         .project-card {
-            background-color: rgb(65, 62, 104);
+            background-color: rgba(65, 62, 104, 0.7);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
         }
         
         .project-image {
             height: 200px;
-            background-color: #ddd;
+            background-color: #333;
             background-size: cover;
             background-position: center;
         }
@@ -103,11 +121,11 @@
         .project-info h3 {
             font-size: 1.3rem;
             margin-bottom: 10px;
-            color: #24292e;
+            color: #ffffff;
         }
         
         .project-info p {
-            color: #586069;
+            color: #cccccc;
             margin-bottom: 15px;
             font-size: 0.95rem;
         }
@@ -120,12 +138,12 @@
         }
         
         .tech-tag {
-            background-color: #f1f8ff;
-            color: #0366d6;
+            background-color: rgba(29, 55, 83, 0.8);
+            color: #58a6ff;
             padding: 3px 10px;
             border-radius: 20px;
             font-size: 0.8rem;
-            border: 1px solid #d1e4fc;
+            border: 1px solid #2c415c;
         }
         
         .project-links {
@@ -142,7 +160,7 @@
             margin-bottom: 20px;
             text-align: center;
             font-size: 1.8rem;
-            color: #24292e;
+            color: #ffffff;
         }
         
         .skills-container {
@@ -153,23 +171,24 @@
         }
         
         .skill-category {
-            background-color: white;
+            background-color: rgba(40, 40, 50, 0.7);
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             min-width: 250px;
         }
         
         .skill-category h3 {
             margin-bottom: 15px;
-            color: #24292e;
+            color: #ffffff;
             font-size: 1.2rem;
-            border-bottom: 2px solid #0366d6;
+            border-bottom: 2px solid #58a6ff;
             padding-bottom: 8px;
         }
         
         .skill-list {
             list-style-type: none;
+            color: #cccccc;
         }
         
         .skill-list li {
@@ -180,7 +199,7 @@
         
         .skill-list li::before {
             content: "•";
-            color: #0366d6;
+            color: #58a6ff;
             font-weight: bold;
             display: inline-block;
             width: 1em;
@@ -192,8 +211,8 @@
             text-align: center;
             padding: 30px 0;
             margin-top: 30px;
-            border-top: 1px solid #eaeaea;
-            color: #586069;
+            border-top: 1px solid #444;
+            color: #aaaaaa;
         }
         
         /* Responsive Adjustments */
@@ -214,6 +233,7 @@
     </style>
 </head>
 <body>
+     <div id="vanta-background"></div>
     <header>
         <h1>Esteban Sandoval</h1>
         <p>Backend Developer</p>
@@ -227,7 +247,7 @@
     
     <main>
         <section>
-            <h2 style="text-align: center; margin-bottom: 30px;">My Projects</h2>
+            <h2 style="text-align: center; margin-bottom: 30px;">Projects & Contributions</h2>
             <div class="projects">
                 <!-- Project 1 -->
                 <div class="project-card">
@@ -251,14 +271,14 @@
                 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url(images/Under-Construction-Sign-for-Locator.webp);"></div>
+                    <div class="project-image" style="background-image: url(images/card24ScreenShot.png);"></div>
                     <div class="project-info">
                         <h3>Card 24 Game</h3>
-                        <p>UNDER CONSTRUCTION</p>
+                        <p>A simple javaFX card game with light AI integration and a simple user interface. My very first AI implementation and will stand as a reference of growth.</p>
                         <div class="tech-stack">
-                            <span class="tech-tag">code</span>
-                            <span class="tech-tag">code</span>
-                            <span class="tech-tag">code</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">XML</span>
+                            <span class="tech-tag">CSS</span>
                         </div>
                         <div class="project-links">
                             <a href="#" target="_blank">Live Demo</a>
@@ -269,14 +289,28 @@
                 
                 <!-- Project 3 -->
                 <div class="project-card">
+                    <div class="project-image" style="background-image: url(images/maxresdefault.jpg);"></div>
+                    <div class="project-info">
+                        <h3>Zowe Java Client SDK v3.0.0</h3>
+                        <p>Authored REST API calls for authentication features such as logIn, logOut and changePassword. Introduced the project wide handling of tokens. </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                        
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">Live Demo</a>
+                            <a href="#" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
                     <div class="project-image" style="background-image: url(images/Under-Construction-Sign-for-Locator.webp);"></div>
                     <div class="project-info">
-                        <h3>UNDER CONSTRUCTION</h3>
-                        <p>Something descriptive</p>
+                        <h3>Maze Game(?)</h3>
+                        <p>Working on it.</p>
                         <div class="tech-stack">
-                            <span class="tech-tag">code</span>
-                            <span class="tech-tag">code</span>
-                            <span class="tech-tag">code</span>
+                            <span class="tech-tag">Java</span>
+                        
                         </div>
                         <div class="project-links">
                             <a href="#" target="_blank">Live Demo</a>
@@ -333,5 +367,28 @@
         <p>© 2025 Esteban Sandoval. All rights reserved.</p>
         <p>This portfolio is <a href="https://github.com/Sandalcodez/portfolio" target="_blank">open source</a>.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    VANTA.GLOBE({
+      el: "#vanta-background",  // Target the background div, not the body
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x3f9c45,         // Adjusted green color
+      color2: 0xB120B2,        // Dark blue-ish color
+      size: 0.70,              // Slightly larger size
+      backgroundColor: 0x0a0a14, // Very dark background
+      points: 10.00,           // More points
+      maxDistance: 26.00,      // Slightly increased distance
+      spacing: 14.00           // Slightly decreased spacing
+    });
+  });
+</script>
 </body>
 </html>
