@@ -112,6 +112,24 @@
             background-color: #333;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .bull-logo-image {
+            height: 200px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bull-logo-image img {
+            max-width: 103%;
+            max-height: 103%;
+            object-fit: contain;
+            filter: brightness(1.1); /* Slightly brighten the logo for better visibility */
         }
         
         .project-info {
@@ -249,12 +267,12 @@
         <section>
             <h2 style="text-align: center; margin-bottom: 30px;">Projects & Contributions</h2>
             <div class="projects">
-                <!-- Project 1 -->
+                <!-- CircuitSandbox -->
                 <div class="project-card">
                     <div class="project-image" style="background-image: url('images/raw.png');"></div>
                     <div class="project-info">
                         <h3>Circuit Sandbox</h3>
-                        <p>An electrical engineers playground! An Azure backed application where users can make accounts and create complex circuits.  </p>
+                        <p>An electrical engineers playground! An Azure backed application where users can make accounts and create complex circuits.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Java</span>
                             <span class="tech-tag">CSS</span>
@@ -269,7 +287,7 @@
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
+                <!-- Card24-->
                 <div class="project-card">
                     <div class="project-image" style="background-image: url(images/card24ScreenShot.png);"></div>
                     <div class="project-info">
@@ -287,15 +305,14 @@
                     </div>
                 </div>
                 
-                <!-- Project 3 -->
+                <!-- Zowe -->
                 <div class="project-card">
                     <div class="project-image" style="background-image: url(images/maxresdefault.jpg);"></div>
                     <div class="project-info">
                         <h3>Zowe Java Client SDK v3.0.0</h3>
-                        <p>Authored REST API calls for authentication features such as logIn, logOut and changePassword. Introduced the project wide handling of tokens. </p>
+                        <p>Authored REST API calls for authentication features such as logIn, logOut and changePassword. Introduced the project wide handling of tokens.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Java</span>
-                        
                         </div>
                         <div class="project-links">
                             <a href="#" target="_blank">Live Demo</a>
@@ -303,6 +320,25 @@
                         </div>
                     </div>
                 </div>
+                <!-- No-Bears-->
+                <div class="project-card">
+                    <div class="bull-logo-image">
+                        <img src="images/bullLogoNoBG.png" alt="No-Bears Bull Logo">
+                    </div>
+                    <div class="project-info">
+                        <h3>No-Bears</h3>
+                        <p>Managed team of 4 developers to create an AI assisted stock portfolio application. !Bears allow users to replicate stock purchases with real time prices. This serves as an excellent playground for new traders looking to gain some risk-free experience.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">Live Demo</a>
+                            <a href="#" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Under construction card -->
                 <div class="project-card">
                     <div class="project-image" style="background-image: url(images/Under-Construction-Sign-for-Locator.webp);"></div>
                     <div class="project-info">
@@ -310,7 +346,6 @@
                         <p>Working on it. Live Demo and Source Code links dont work yet, stay tuned!</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Java</span>
-                        
                         </div>
                         <div class="project-links">
                             <a href="#" target="_blank">Live Demo</a>
@@ -343,7 +378,7 @@
                         <li>C++</li>
                         <li>typeScript</li>
                         <li>RESTful APIs</li>
-                        <li>Azure & MongoDB </li>
+                        <li>Azure & MongoDB</li>
                         <li>SQL & NoSQL Databases</li>
                     </ul>
                 </div>
@@ -372,7 +407,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     VANTA.GLOBE({
-      el: "#vanta-background",  // Target the background div, not the body
+      el: "#vanta-background",
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
@@ -380,13 +415,13 @@
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0x3f9c45,         // Adjusted green color
-      color2: 0xB120B2,        // Dark blue-ish color
-      size: 0.70,              // Slightly larger size
-      backgroundColor: 0x0a0a14, // Very dark background
-      points: 10.00,           // More points
-      maxDistance: 26.00,      // Slightly increased distance
-      spacing: 14.00           // Slightly decreased spacing
+      color: 0x3f9c45,
+      color2: 0xB120B2,
+      size: 0.70,
+      backgroundColor: 0x0a0a14,
+      points: 10.00,
+      maxDistance: 26.00,
+      spacing: 14.00
     });
   });
 </script>
